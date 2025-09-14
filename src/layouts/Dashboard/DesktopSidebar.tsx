@@ -6,6 +6,8 @@ import { Link, useLocation } from "react-router-dom";
 const DesktopSidebar = () => {
   const location = useLocation();
   const firstSegment = location.pathname.split("/")[1];
+  console.log(firstSegment);
+  console.log(sidebarLinks);
 
   return (
     <section className="fixed">
@@ -32,7 +34,7 @@ const DesktopSidebar = () => {
                       className={`${
                         (val.name.toLowerCase() === "dashboard" &&
                           firstSegment === "") ||
-                        firstSegment === val.name.toLowerCase()
+                        firstSegment === val.link.toLowerCase()
                           ? "bg-primary font-medium text-white hover:bg-primary hover:text-white"
                           : ""
                       } flex gap-3 items-center text-[14px] leading-[145%] md:text-[14px] h-[44px] px-6 duration-300 hover:bg-[#F9FAFB] hover:text-primary rounded`}

@@ -7,7 +7,7 @@ export default function Table({ columns, data }: TableProps) {
         {/* Head */}
         <thead className="bg-gray-100 text-left uppercase">
           <tr>
-            {columns.map((col, idx) => (
+            {columns?.map((col, idx) => (
               <th
                 key={idx}
                 className={`px-4 py-4 text-[16px] leading-[145%] font-medium text-gray-700 ${
@@ -22,7 +22,7 @@ export default function Table({ columns, data }: TableProps) {
 
         {/* Body */}
         <tbody>
-          {data.length > 0 ? (
+          {data?.length > 0 ? (
             data.map((row, i) => (
               <tr key={i} className=" hover:bg-gray-100 transition-colors">
                 {columns.map((col, idx) => (
@@ -44,7 +44,7 @@ export default function Table({ columns, data }: TableProps) {
           ) : (
             <tr>
               <td
-                colSpan={columns.length}
+                colSpan={columns?.length}
                 className="text-center py-6 text-gray-500"
               >
                 No data available

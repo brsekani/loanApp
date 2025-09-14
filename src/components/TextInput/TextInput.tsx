@@ -13,7 +13,7 @@ export default function TextInput({ label, ...props }: TextInputProps) {
         {...field}
         {...props}
         id={props.name}
-        className={`h-14 px-4 outline-none border rounded-[6px] placeholder:text-gray-400 
+        className={`h-14 px-4 outline-primary border rounded-[6px] placeholder:text-gray-400 
           ${meta.touched && meta.error ? "border-red-500" : "border-gray-300"}`}
       />
       {meta.touched && meta.error && (

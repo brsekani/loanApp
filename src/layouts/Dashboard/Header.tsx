@@ -42,7 +42,7 @@ const Header = ({ isOpen, setIsOpen }: any) => {
           </div>
         </div>
         <div className="flex gap-3 items-center z-30">
-          <button className="" onClick={toggleDrawer}>
+          <button className="block lg:hidden" onClick={toggleDrawer}>
             {isOpen ? <X /> : <Menu />}
           </button>
           <button className="text-primary cursor-pointer bg-[#F0F2F5] lg:w-12 lg:h-12 w-7 h-7 flex items-center justify-center rounded-full outline-none">

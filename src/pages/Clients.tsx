@@ -40,11 +40,11 @@ export default function Clients() {
       fixed: "right", // ✅ stick this column to the right
       accessor: "id",
       render: (_: any, row: any) => (
-        <div>
-          <EllipsisVertical
-            onClick={() => alert(`Editing ${row.name}`)}
-            className="hidden md:block"
-          />
+        <div
+          className="cursor-pointer"
+          onClick={() => navigate(`/clients/${row.id}`)}
+        >
+          <EllipsisVertical className="hidden md:block" />
 
           <p className="block md:hidden text-[14px] leading-[145%] font-semibold text-primary">
             Details
@@ -104,7 +104,7 @@ export default function Clients() {
           <Button
             variant="primary"
             icon={<img src={add} alt="+" />}
-            onClick={() => navigate("/clients/add")}
+            onClick={() => navigate("/clients/new")}
           >
             Add New Clients
           </Button>

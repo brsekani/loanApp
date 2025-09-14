@@ -3,7 +3,7 @@ import React from "react";
 
 export interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline" | "danger";
+  variant?: "primary" | "secondary" | "outline" | "danger" | "green";
   size?: "sm" | "md" | "lg";
   loading?: boolean;
   onClick?: () => void;
@@ -11,4 +11,6 @@ export interface ButtonProps {
   iconPosition?: "left" | "right";
   disabled?: boolean;
   type?: "button" | "reset" | "submit";
+  width?: string;
+  height?: string;
 }

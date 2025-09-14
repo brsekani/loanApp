@@ -11,7 +11,7 @@ import {
   type StepIconProps,
 } from "@mui/material";
 import { useState } from "react";
-import verified from "@/assets/icons/verified.svg";
+import verified from "@/assets/icons/verifiedBlue.svg";
 import Button from "@/components/Button/Button";
 import {
   ErrorMessage,
